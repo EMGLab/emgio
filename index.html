@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Documentation for EMGIO - EMG data import/export and manipulation">
+        <meta name="description" content="Documentation for biosigIO - biosignal (EEG/EMG/iEEG/MEG) import/export and manipulation">
       
       
         <meta name="author" content="Seyed (Yahya) Shirazi">
@@ -17,19 +17,22 @@
         <link rel="next" href="user-guide/installation/">
       
       
+        
+      
+      
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>EMGIO Documentation</title>
+        <title>biosigIO Documentation</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -58,7 +61,6 @@
 
     
     
-    
   </head>
   
   
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-emgio" class="md-skip">
+        <a href="#welcome-to-biosigio" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +100,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="EMGIO Documentation" class="md-header__button md-logo" aria-label="EMGIO Documentation" data-md-component="logo">
+    <a href="." title="biosigIO Documentation" class="md-header__button md-logo" aria-label="biosigIO Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -112,7 +114,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            EMGIO Documentation
+            biosigIO Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -220,13 +222,13 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/neuromechanist/emgio" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/neuromechanist/biosigio" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
-    neuromechanist/emgio
+    neuromechanist/biosigio
   </div>
 </a>
       </div>
@@ -256,23 +258,23 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="EMGIO Documentation" class="md-nav__button md-logo" aria-label="EMGIO Documentation" data-md-component="logo">
+    <a href="." title="biosigIO Documentation" class="md-nav__button md-logo" aria-label="biosigIO Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    EMGIO Documentation
+    biosigIO Documentation
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/neuromechanist/emgio" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/neuromechanist/biosigio" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
-    neuromechanist/emgio
+    neuromechanist/biosigio
   </div>
 </a>
     </div>
@@ -300,9 +302,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Home
+  
+
     
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -313,9 +320,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Home
+  
+
     
   </span>
+  
   
 
       </a>
@@ -336,9 +348,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-emgio" class="md-nav__link">
+  <a href="#why-biosigio" class="md-nav__link">
     <span class="md-ellipsis">
-      Why EMGIO?
+      
+        Why biosigIO?
+      
     </span>
   </a>
   
@@ -347,7 +361,9 @@
         <li class="md-nav__item">
   <a href="#key-features" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Features
+      
+        Key Features
+      
     </span>
   </a>
   
@@ -356,7 +372,9 @@
         <li class="md-nav__item">
   <a href="#quick-example" class="md-nav__link">
     <span class="md-ellipsis">
-      Quick Example
+      
+        Quick Example
+      
     </span>
   </a>
   
@@ -365,7 +383,9 @@
         <li class="md-nav__item">
   <a href="#documentation-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Documentation Structure
+      
+        Documentation Structure
+      
     </span>
   </a>
   
@@ -374,7 +394,9 @@
         <li class="md-nav__item">
   <a href="#license" class="md-nav__link">
     <span class="md-ellipsis">
-      License
+      
+        License
+      
     </span>
   </a>
   
@@ -427,9 +449,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     User Guide
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -438,7 +465,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            User Guide
+            
+  
+    User Guide
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -454,9 +485,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Installation
+  
+
     
   </span>
+  
   
 
       </a>
@@ -477,9 +513,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Basic Usage
+  
+
     
   </span>
+  
   
 
       </a>
@@ -500,9 +541,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Channel Selection
+  
+
     
   </span>
+  
   
 
       </a>
@@ -523,9 +569,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     EDF/BDF Format Selection
+  
+
     
   </span>
+  
   
 
       </a>
@@ -546,9 +597,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Metadata Handling
+  
+
     
   </span>
+  
   
 
       </a>
@@ -569,9 +625,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Signal Verification
+  
+
     
   </span>
+  
   
 
       </a>
@@ -595,6 +656,16 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -626,9 +697,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Data Formats
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -637,7 +713,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Data Formats
+            
+  
+    Data Formats
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -653,9 +733,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Trigno
+  
+
     
   </span>
+  
   
 
       </a>
@@ -676,9 +761,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     EEGLAB
+  
+
     
   </span>
+  
   
 
       </a>
@@ -699,9 +789,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     OTB
+  
+
     
   </span>
+  
   
 
       </a>
@@ -722,9 +817,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     EDF
+  
+
     
   </span>
+  
   
 
       </a>
@@ -745,9 +845,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     CSV
+  
+
     
   </span>
+  
   
 
       </a>
@@ -768,9 +873,154 @@
   
   
   <span class="md-ellipsis">
+    
+  
     WFDB
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="formats/xdf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XDF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="formats/meg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MEG (.fif / CTF .ds / KIT / 4D-BTi)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="formats/brainvision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BrainVision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="formats/mef3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MEF3 (.mefd)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="formats/neo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proprietary electrophysiology (Neo)
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -794,12 +1044,6 @@
   
     
     
-      
-        
-      
-        
-      
-        
       
         
       
@@ -823,9 +1067,14 @@
   
   
   <span class="md-ellipsis">
-    API Reference
+    
+  
+    Serialization & Serving
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -834,7 +1083,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            API Reference
+            
+  
+    Serialization & Serving
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -845,93 +1098,19 @@
   
   
     <li class="md-nav__item">
-      <a href="api/emg/" class="md-nav__link">
+      <a href="formats/serialization/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    EMG Class
+    
+  
+    Overview (Parquet/Arrow/Zarr)
+  
+
     
   </span>
   
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Importers
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_2">
-            <span class="md-nav__icon md-icon"></span>
-            Importers
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="api/importers/base/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Base Importer
-    
-  </span>
   
 
       </a>
@@ -947,365 +1126,22 @@
   
   
     <li class="md-nav__item">
-      <a href="api/importers/trigno/" class="md-nav__link">
+      <a href="formats/zarr/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Trigno Importer
+    
+  
+    Zarr Serving Store
+  
+
     
   </span>
+  
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="api/importers/eeglab/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    EEGLAB Importer
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="api/importers/otb/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    OTB Importer
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="api/importers/edf/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    EDF Importer
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="api/importers/csv/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    CSV Importer
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="api/importers/wfdb/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    WFDB Importer
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Exporters
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
-            <span class="md-nav__icon md-icon"></span>
-            Exporters
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="api/exporters/edf/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    EDF/BDF Exporter
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Analysis
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_4">
-            <span class="md-nav__icon md-icon"></span>
-            Analysis
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="api/analysis/verification/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Verification
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Visualization
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_5">
-            <span class="md-nav__icon md-icon"></span>
-            Visualization
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="api/visualization/static/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Static Plots
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -1326,6 +1162,14 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -1357,9 +1201,14 @@
   
   
   <span class="md-ellipsis">
-    Examples
+    
+  
+    API Reference
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1368,7 +1217,1089 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            Examples
+            
+  
+    API Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/emg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recording Class
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command-Line Interface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/core/modality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modality Vocabulary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/bids/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BIDS Helpers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/units/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Physical Units
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/tabular_schema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Serialization Schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Importers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Importers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/importers/base/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Base Importer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/importers/trigno/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trigno Importer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/importers/eeglab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EEGLAB Importer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/importers/otb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OTB Importer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/importers/edf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EDF Importer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/importers/csv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CSV Importer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/importers/wfdb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WFDB Importer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/importers/xdf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XDF Importer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/importers/meg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MEG Importer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/importers/brainvision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BrainVision Importer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/importers/mef3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MEF3 Importer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/importers/neo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Neo Importer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/importers/tabular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tabular Importer (Parquet/Arrow)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/importers/zarr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zarr Importer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exporters
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Exporters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/exporters/edf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EDF/BDF Exporter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/exporters/tabular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tabular Exporter (Parquet/Arrow)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/exporters/zarr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zarr Exporter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_9" id="__nav_5_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analysis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/analysis/verification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/analysis/signal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signal Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_10" id="__nav_5_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visualization
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Visualization
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/visualization/static/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Static Plots
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Examples
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1384,9 +2315,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Trigno Examples
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1407,9 +2343,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     EEGLAB Examples
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1430,9 +2371,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     OTB Examples
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1453,9 +2399,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Signal Verification
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1476,9 +2427,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Converting Jupyter Notebooks
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1499,9 +2455,70 @@
   
   
   <span class="md-ellipsis">
+    
+  
     WFDB Example
+  
+
     
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="examples/xdf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XDF Example
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="examples/serialization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Serialization Round-Trip
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1529,9 +2546,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Contributing
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1566,9 +2588,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-emgio" class="md-nav__link">
+  <a href="#why-biosigio" class="md-nav__link">
     <span class="md-ellipsis">
-      Why EMGIO?
+      
+        Why biosigIO?
+      
     </span>
   </a>
   
@@ -1577,7 +2601,9 @@
         <li class="md-nav__item">
   <a href="#key-features" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Features
+      
+        Key Features
+      
     </span>
   </a>
   
@@ -1586,7 +2612,9 @@
         <li class="md-nav__item">
   <a href="#quick-example" class="md-nav__link">
     <span class="md-ellipsis">
-      Quick Example
+      
+        Quick Example
+      
     </span>
   </a>
   
@@ -1595,7 +2623,9 @@
         <li class="md-nav__item">
   <a href="#documentation-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Documentation Structure
+      
+        Documentation Structure
+      
     </span>
   </a>
   
@@ -1604,7 +2634,9 @@
         <li class="md-nav__item">
   <a href="#license" class="md-nav__link">
     <span class="md-ellipsis">
-      License
+      
+        License
+      
     </span>
   </a>
   
@@ -1620,6 +2652,7 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
@@ -1629,19 +2662,20 @@
   
 
 
-<h1 id="welcome-to-emgio">Welcome to EMGIO<a class="headerlink" href="#welcome-to-emgio" title="Permanent link">&para;</a></h1>
-<p><a href="https://github.com/neuromechanist/emgio/actions/workflows/tests.yml"><img alt="Tests" src="https://github.com/neuromechanist/emgio/actions/workflows/tests.yml/badge.svg" /></a>
-<a href="https://codecov.io/gh/neuromechanist/emgio"><img alt="codecov" src="https://codecov.io/gh/neuromechanist/emgio/branch/main/graph/badge.svg?token=63EDIA9TWD" /></a></p>
-<p>EMGIO is a Python package for EMG data import/export and manipulation. It provides a unified interface for working with EMG data from various systems and exporting to standardized formats with harmonized metadata.</p>
-<h2 id="why-emgio">Why EMGIO?<a class="headerlink" href="#why-emgio" title="Permanent link">&para;</a></h2>
-<p>Working with EMG data across multiple recording systems can be challenging due to:</p>
+<h1 id="welcome-to-biosigio">Welcome to biosigIO<a class="headerlink" href="#welcome-to-biosigio" title="Permanent link">&para;</a></h1>
+<p><a href="https://badge.fury.io/py/biosigio"><img alt="PyPI version" src="https://badge.fury.io/py/biosigio.svg" /></a>
+<a href="https://github.com/neuromechanist/biosigio/actions/workflows/tests.yml"><img alt="Tests" src="https://github.com/neuromechanist/biosigio/actions/workflows/tests.yml/badge.svg" /></a>
+<a href="https://codecov.io/gh/neuromechanist/biosigio"><img alt="codecov" src="https://codecov.io/gh/neuromechanist/biosigio/branch/main/graph/badge.svg?token=63EDIA9TWD" /></a></p>
+<p>biosigIO is a Python package for biosignal import/export and manipulation across modalities (EEG, EMG, iEEG, MEG, and behavioral/marker streams). It provides a unified <code>Recording</code> interface for working with data from many acquisition systems and archives and exporting it to standardized and serving formats with harmonized metadata.</p>
+<h2 id="why-biosigio">Why biosigIO?<a class="headerlink" href="#why-biosigio" title="Permanent link">&para;</a></h2>
+<p>Working with biosignal data across multiple recording systems can be challenging due to:</p>
 <ul>
 <li>Different file formats</li>
 <li>Varied metadata structures</li>
 <li>Inconsistent channel naming</li>
 <li>Diverse sampling rates and filtering</li>
 </ul>
-<p>EMGIO simplifies this process by providing a standardized interface for loading, manipulating, and exporting EMG data regardless of the original source.</p>
+<p>biosigIO simplifies this process by providing a standardized interface for loading, manipulating, and exporting biosignal data regardless of the original source.</p>
 <h2 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Multi-system support</strong>:</li>
@@ -1650,6 +2684,11 @@
 <li>OTB Systems (supported)</li>
 <li>EDF/BDF(+) (supported, including annotations)</li>
 <li>WFDB (supported, including annotations)</li>
+<li>XDF/Lab Streaming Layer (supported, multi-stream)</li>
+<li>MEG: <code>.fif</code>, CTF <code>.ds</code>, KIT/Yokogawa <code>.con</code>/<code>.sqd</code>/<code>.kdf</code>, and 4D Neuroimaging/BTi (a directory, detected by content) via MNE (supported; <code>meg</code> extra)</li>
+<li>BrainVision <code>.vhdr</code> via MNE (supported; <code>meg</code> extra)</li>
+<li>MEF3 iEEG <code>.mefd</code> via MNE (supported; <code>mef3</code> extra -- mne&gt;=1.12 plus pymef)</li>
+<li>Proprietary electrophysiology via python-neo: Intan, Blackrock, Spike2, Plexon, Micromed, Neuralynx (supported; <code>neo</code> extra)</li>
 <li>Generic CSV (supported with auto-detection)</li>
 <li>
 <p>Noraxon (planned)</p>
@@ -1660,8 +2699,9 @@
 <li>Automatic file format detection</li>
 <li>Format-specific metadata extraction</li>
 <li>Handling of specialized CSV formats</li>
+<li>Automatic annotation/event loading (WFDB, EDF+/BDF+, and EEGLAB .set) into the events table, embedded back on EDF+/BDF+ export and carried in the Parquet/Arrow/Zarr serialization formats</li>
 <li>
-<p>Automatic annotation loading (WFDB, planned for EDF+/BDF+ and EEGLAB's .set files)</p>
+<p>LSL timestamp preservation for XDF files (for synchronization)</p>
 </li>
 <li>
 <p><strong>Intelligent export</strong>:</p>
@@ -1673,6 +2713,13 @@
 <p>Annotation export (EDF+/BDF+)</p>
 </li>
 <li>
+<p><strong>Serialization &amp; serving</strong> (see <a href="formats/serialization/">Serialization &amp; Serving</a>):</p>
+</li>
+<li>Parquet and Arrow/Feather: lossless columnar round-trip (analytics, fast IPC); <code>arrow</code> extra</li>
+<li>
+<p>Zarr: cloud-native serving store (viewing, inference, and training from one store), a derived downsampled copy; <code>zarr</code> extra</p>
+</li>
+<li>
 <p><strong>Data manipulation</strong>:</p>
 </li>
 <li>Channel selection</li>
@@ -1682,24 +2729,24 @@
 <li>Raw data access and modification</li>
 </ul>
 <h2 id="quick-example">Quick Example<a class="headerlink" href="#quick-example" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">emgio</span><span class="w"> </span><span class="kn">import</span> <span class="n">EMG</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">biosigio</span><span class="w"> </span><span class="kn">import</span> <span class="n">Recording</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># Load data with automatic format detection, will issue an error to indicate use of the `trigno` importer</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">emg</span> <span class="o">=</span> <span class="n">EMG</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s1">&#39;data.csv&#39;</span><span class="p">)</span>  <span class="c1"># Format detected from file extension</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">rec</span> <span class="o">=</span> <span class="n">Recording</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s1">'data.csv'</span><span class="p">)</span>  <span class="c1"># Format detected from file extension</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># Load data with explicit importer</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">emg</span> <span class="o">=</span> <span class="n">EMG</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s1">&#39;data.csv&#39;</span><span class="p">,</span> <span class="n">importer</span><span class="o">=</span><span class="s1">&#39;trigno&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">rec</span> <span class="o">=</span> <span class="n">Recording</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s1">'data.csv'</span><span class="p">,</span> <span class="n">importer</span><span class="o">=</span><span class="s1">'trigno'</span><span class="p">)</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1"># Plot specific channels</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">emg</span><span class="o">.</span><span class="n">plot_signals</span><span class="p">([</span><span class="s1">&#39;EMG1&#39;</span><span class="p">,</span> <span class="s1">&#39;EMG2&#39;</span><span class="p">])</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">rec</span><span class="o">.</span><span class="n">plot_signals</span><span class="p">([</span><span class="s1">'EMG1'</span><span class="p">,</span> <span class="s1">'EMG2'</span><span class="p">])</span>
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1"># Export to EDF/BDF (format automatically determined)</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">emg</span><span class="o">.</span><span class="n">to_edf</span><span class="p">(</span><span class="s1">&#39;output.edf&#39;</span><span class="p">)</span>  <span class="c1"># Extension will be added if not provided</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">rec</span><span class="o">.</span><span class="n">to_edf</span><span class="p">(</span><span class="s1">'output.edf'</span><span class="p">)</span>  <span class="c1"># Extension will be added if not provided</span>
 </code></pre></div>
 <h2 id="documentation-structure">Documentation Structure<a class="headerlink" href="#documentation-structure" title="Permanent link">&para;</a></h2>
 <p>This documentation is organized as follows:</p>
 <ul>
-<li><strong>User Guide</strong>: Step-by-step instructions for using EMGIO</li>
+<li><strong>User Guide</strong>: Step-by-step instructions for using biosigIO</li>
 <li><strong>Data Formats</strong>: Details about supported input/output formats</li>
 <li><strong>API Reference</strong>: Complete documentation of classes and methods</li>
 <li><strong>Examples</strong>: Practical examples for various use cases</li>
@@ -1754,10 +2801,11 @@
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.tracking", "navigation.expand", "navigation.indexes", "content.code.copy", "content.code.annotate"], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.tracking", "navigation.expand", "navigation.indexes", "content.code.copy", "content.code.annotate"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
-      <script src="assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
